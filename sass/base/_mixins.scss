@@ -1,0 +1,36 @@
+@mixin link-hover {
+    &::after {
+        background-color: $main-color;
+        display: block;
+        content: "";
+        height: 1px;
+        width: 0%;
+        -webkit-transition: width .3s ease-in-out;
+        -moz--transition: width .3s ease-in-out;
+        transition: width .3s ease-in-out;
+    }
+    &:hover {
+        color: $main-color;
+    }
+    &:hover::after,&:focus::after {
+        width: 100%;
+    }
+}
+@mixin link-hover-white {
+    &::after {
+        background-color: #fff;
+        display: block;
+        content: "";
+        height: 1px;
+        width: 0%;
+        -webkit-transition: width .3s ease-in-out;
+        -moz--transition: width .3s ease-in-out;
+        transition: width .3s ease-in-out;
+    }
+    &:hover {
+        color: #fff;
+    }
+    &:hover::after,&:focus::after {
+        width: 100%;
+    }
+}
